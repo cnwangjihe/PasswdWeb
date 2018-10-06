@@ -14,6 +14,7 @@
 	  		$("#Result").text(data);
 	  		$('#Result_Modal').modal('show');
 	  	});
+		$("#Passwd").val('');
 	  });
 	});
 	$(document).ready(setTimeout(function(){
