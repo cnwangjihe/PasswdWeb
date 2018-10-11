@@ -2,6 +2,7 @@
 <html data-n-head-ssr data-n-head="">
 
 <head>
+	<link rel="icon" href="favicon.png">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX"></script>
 	<script>
