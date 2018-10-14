@@ -4,7 +4,7 @@
 	if ($_SESSION["level"] != $problem_count)
 		die("You have not finish the problem yet");
 
-	if (hash_equals($_POST["token_calc"] , $_SESSION["token_calc"])===false)
+	if (hash_equals($_POST["token_calc"] , hash_hmac('sha256', '/calc.php', $_SESSION["token_calc"]))===false)
 		die("Cross-site Request Forgery Detected");
 
 	$arg[0]=$_POST["Text"];

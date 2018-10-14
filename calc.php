@@ -71,7 +71,7 @@
 								</select>
 							</div>
 							<br/>
-							<input type='hidden' id='token_calc' value="<?php echo $_SESSION['token_calc'];?>">
+							<input type='hidden' id='token_calc' value="<?php echo hash_hmac('sha256', '/calc.php', $_SESSION['token_calc']);?>">
 							<div>
 								<button id="submit" class="button-mine btn-mine btn-secondary">Calc</button>
 							</div>

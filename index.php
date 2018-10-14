@@ -55,7 +55,7 @@ if (!isset($_SESSION['level']))
 $answer = isset($_POST['answer'])? htmlspecialchars($_POST['answer']) : '';
 if ($_SESSION['level'] != $problem_count &&
 	$answer == $correct_answers[$_SESSION['level']] &&
-	hash_equals($_POST['token_auth'],$_SESSION['token_auth']))
+	hash_equals($_POST['token_auth'],hash_hmac('sha256', '/auth.php', $_SESSION['token_auth'])))
 	$_SESSION['level']++;
 
 $i = $_SESSION['level'];

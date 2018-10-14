@@ -22,7 +22,7 @@
 									<input id="answer" name="answer" value="" class="input">
 								</div>
 								<br/>
-								<input type='hidden' name='token_auth' value="<?php echo $_SESSION['token_auth'];?>">
+								<input type='hidden' name='token_auth' value="<?php echo hash_hmac('sha256', '/auth.php', $_SESSION['token_auth']);?>">
 								<div>
 									<input type="submit" value="Submit" class="btn-mine btn-secondary button-mine">
 								</div>
